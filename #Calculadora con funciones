@@ -1,0 +1,84 @@
+#Calculadora con funciones 
+# Menu
+def menu():
+  print("Menu");
+  print();
+  print("1: Suma");
+  print("2: Resta");
+  print("3: Multiplicación");
+  print("4: División");
+  print("5: Potenciación");
+  print("6: Raíz cuadrada");
+  a=int(input("Ingrese la opcion con el numero que corresponde a cada opcion: "))
+  print();
+  return a;
+# Solicitar numero
+def numeros():
+  b=float(input("ingresa el primer numero "));
+  c=float(input("ingresa el segundo numero "));
+  return b,c;
+# Suma
+def suma():
+  print("Suma")
+  b,c=numeros()
+  print();
+  print("La suma es ", b+c);
+# Resta
+def resta():
+  print("Resta")
+  b,c=numeros()
+  print();
+  print("La resta es ", b-c);
+# Multiplicacion
+def multiplicacion():
+  print("Multiplicación")
+  b,c=numeros()
+  print();
+  print("La Multiplicación es ", b*c);
+# Divicion
+def division():
+  print("División")
+  b,c=numeros()
+  if (c==0):
+    print("No se puede dividir entre 0");
+  else:
+    print();
+    print("La División es ", b/c);
+# Potenciación
+def potenciacion():
+  print("Potenciación de un numero")
+  b=float(input("ingresa el numero base "));
+  c=float(input("ingresa el exponente "));
+  print();
+  print("El resultado es ", b**c);
+# Raíz cuadrada
+def raiz():
+  print("Raíz cuadrada")
+  b=float(input("ingresa el radicando "));
+  c=float(input("ingresa el indice "));
+  if (c<=0):
+    print("Indice no valido");
+  else:
+    print();
+    print("El resultado es ", b**(1/c));
+# Opciones
+def opciones(a):
+  if(a==1):
+    suma()
+  elif(a==2):
+    resta()
+  elif(a==3):
+    multiplicacion()
+  elif(a==4):
+    division()
+  elif(a==5):
+    potenciacion
+  elif(a==6):
+    raiz()
+  else:
+    print("Opcion no valida");
+# iniciar
+def iniciar():
+  a=menu()
+  opciones(a)
+iniciar()

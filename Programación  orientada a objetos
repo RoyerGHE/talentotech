@@ -1,0 +1,18 @@
+class carro:
+    def __init__(self,marca,color,modelo,año):
+      self.marca=marca
+      self.color=color
+      self.modelo=modelo
+      self.año=año
+class carro_problema(carro):
+    def __init__ (self,marca,color,modelo,año,problema):
+      super().__init__(marca,color,modelo,año)
+      self.problema=problema
+carro1 = carro("Toyota","Rojo","RAV4",2024);
+carro2 = carro_problema("Renault","Azul","Authentique",2020,"Fallo motor");
+
+print(carro1.marca)
+print(carro1.color)
+print(carro1.modelo)
+print(carro1.año)
+print(carro2.problema)

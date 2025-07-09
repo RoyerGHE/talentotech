@@ -1,4 +1,4 @@
-#Calculadora con funciones 
+import math
 # Menu
 def menu():
   print("Menu");
@@ -9,7 +9,10 @@ def menu():
   print("4: División");
   print("5: Potenciación");
   print("6: Raíz cuadrada");
-  a=int(input("Ingrese la opcion con el numero que corresponde a cada opcion: "))
+  print("7: Seno");
+  print("8: Coseno");
+  print("9: Tangente");
+  a=(input("Ingrese la opcion con el numero que corresponde a cada opcion: "))
   print();
   return a;
 # Solicitar numero
@@ -61,9 +64,28 @@ def raiz():
   else:
     print();
     print("El resultado es ", b**(1/c));
+# seno
+def seno():
+  print("Seno")
+  b=float(input("ingresa el angulo "));
+  print();
+  print("El resultado es ", math.sin(b));
+# coseno
+def coseno():
+  print("Coseno")
+  b=float(input("ingresa el angulo "));
+  print();
+  math.radians(b)
+  print("El resultado es ", math.cos(b));
+  # tangente
+def tangente():
+  print("Tangente")
+  b=float(input("ingresa el angulo "));
+  print();
+  print("El resultado es ", math.tan(b));
 # Opciones
 def opciones(a):
-  if(a==1):
+  if(a==1, "Suma"):
     suma()
   elif(a==2):
     resta()
@@ -75,6 +97,12 @@ def opciones(a):
     potenciacion
   elif(a==6):
     raiz()
+  elif(a==7):
+    seno()
+  elif(a==8):
+    coseno()
+  elif(a==9):
+    tangente()
   else:
     print("Opcion no valida");
 # iniciar
